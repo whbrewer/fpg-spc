@@ -1,0 +1,595 @@
+**** FPG ****  FORWARD POPULATION GENETIC SIMULATION 
+  input file: fpgtestdata    this output file: test.fpg 
+-------------------------------------------------------------------------
+  Basic Input Parameters
+  Label  InputFlag  Meaning 
+  -----  ---------  --------
+  popsize      -G   the # of haploid genome copies (gametes) in the population 
+  polytype     -O   types of polymorphisms to analysis 
+  chromeseqs   -C   the # of segments per chromosome, 32 bits per segment 
+  chromenum    -X   number of chromosomes 
+  pop_u_s      -V   population selected mutation rate 
+  popscoeff    -S   population selection coefficient (gamsize * selection coefficient) 
+  del_prop     -F   proportion of selected mutations that are deleterious
+  dominance    -H   dominance of selected mutations 
+  fit_schema   -W   fitness model: A - additive, M - multiplicatative, E - epistatic 
+  epistasis    -Y   degree of epistatis among selected mutations 
+  pop_u_n      -U   population neutral mutation rate 
+  poprecrate   -R   population  recombination rate (gamsize* rec.rate per chromosome)
+  mrate        -M   migration rate out of each population per generation 
+  numpops      -K   number of subpopulations 
+  measurements -N   the number of measurements to make 
+  bp           -B   length of each chromosome in base pairs 
+  rand         -A   random number generator seed 
+  t_start      -I   length of burn-in period in units of population size generations
+  t_between    -J   time between measurements after burnin, in units of population size generations
+  LD_analysis  -L   invokes linkage disequilibrium analysis 
+  pseudo_data  -T   causes a pseudo data set, in SITES Program format to be included in output 
+  absolutefit  -Q   causes fitness measurements to include all those mutations that fixed 
+
+ Result Values     Meaning
+ ------ ------     -------
+  startmutavail    the number of positions for mutations =  chromesegs*chromenum*i_segment_bits
+  meanmutavail     average number of available mutation spots found at check time  
+                      includes those not used, those used and lost, and those used and fixed 
+  minmutavail      minimum number of available mutation spots 
+
+
+
+
+*************************************************************************************
+*    PARAMETER SET NUMBER   1
+*    Parameter String: -g100 -c1 -x2  -u2  -v0  -r0 -n100 -i4 -j1 -oN -k1  
+*************************************************************************************
+
+
+   Reports of Generation Number and Population Mean Fitness 
+   ----------------------------------------------------------------------------
+    100       1.00000000      200       1.00000000      300       1.00000000      400       1.00000000  
+    500       1.00000000      600       1.00000000      700       1.00000000      800       1.00000000  
+    900       1.00000000     1000       1.00000000     1100       1.00000000     1200       1.00000000  
+   1300       1.00000000     1400       1.00000000     1500       1.00000000     1600       1.00000000  
+   1700       1.00000000     1800       1.00000000     1900       1.00000000     2000       1.00000000  
+   2100       1.00000000     2200       1.00000000     2300       1.00000000     2400       1.00000000  
+   2500       1.00000000     2600       1.00000000     2700       1.00000000     2800       1.00000000  
+   2900       1.00000000     3000       1.00000000     3100       1.00000000     3200       1.00000000  
+   3300       1.00000000     3400       1.00000000     3500       1.00000000     3600       1.00000000  
+   3700       1.00000000     3800       1.00000000     3900       1.00000000     4000       1.00000000  
+   4100       1.00000000     4200       1.00000000     4300       1.00000000     4400       1.00000000  
+   4500       1.00000000     4600       1.00000000     4700       1.00000000     4800       1.00000000  
+   4900       1.00000000     5000       1.00000000     5100       1.00000000     5200       1.00000000  
+   5300       1.00000000     5400       1.00000000     5500       1.00000000     5600       1.00000000  
+   5700       1.00000000     5800       1.00000000     5900       1.00000000     6000       1.00000000  
+   6100       1.00000000     6200       1.00000000     6300       1.00000000     6400       1.00000000  
+   6500       1.00000000     6600       1.00000000     6700       1.00000000     6800       1.00000000  
+   6900       1.00000000     7000       1.00000000     7100       1.00000000     7200       1.00000000  
+   7300       1.00000000     7400       1.00000000     7500       1.00000000     7600       1.00000000  
+   7700       1.00000000     7800       1.00000000     7900       1.00000000     8000       1.00000000  
+   8100       1.00000000     8200       1.00000000     8300       1.00000000     8400       1.00000000  
+   8500       1.00000000     8600       1.00000000     8700       1.00000000     8800       1.00000000  
+   8900       1.00000000     9000       1.00000000     9100       1.00000000     9200       1.00000000  
+   9300       1.00000000     9400       1.00000000     9500       1.00000000     9600       1.00000000  
+   9700       1.00000000     9800       1.00000000     9900       1.00000000    10000       1.00000000  
+  10100       1.00000000    10200       1.00000000    10300       1.00000000  
+   ----------------------------------------------------------------------------
+
+   FITNESS IS MULTIPLICATIVE 
+
+ FITNESS VALUES *DO NOT* INCLUDE FIXED MUTATIONS 
+Runtime Parameters 
+------- ----------
+	popsize     :	 100  
+	polytype    :	 N  
+	chromesegs  :	 1   
+	chromenum   :	 2  
+	pop_u_s     :	 0.00    
+	popscoeff   :	 0.00    
+	del_prop    :	 0.00    
+	dominance   :	 0.000  
+	fit schema  :	 M
+	pop_u_n     :	 2.00    
+	poprecrate  :	 0.00    
+	mrate       :	 0.000   
+	numpops     :	 1    
+	measurements:	 100  
+	bp          :	 1           
+	rand        :	 1419572674 
+	t_start     :	 400  
+	t_between   :	 100  
+	LD_analysis :	   
+
+
+-------------------------------------------
+** BASIC MEASUREMENTS  - FOR DATA SET  1 **
+-------------------------------------------
+
+	startmutavail :	           64 
+	meanmutavail  :	         43.1 
+	minmutavail   :	            2 
+
+ Total Number of Generations                  : 10300    in popsize units: 103.00  
+ Burn-In Period Ended in Generation           : 400      in popsize units: 4.00    
+ Number of Generations After Burn-In Period   : 9900     in popsize units: 99.00   
+ Overall Mean Population Fitness After Burn-In: 1.00000      
+
+ Total Mutation Counts, # Fixed and # Lost, Mean Polymorphism Counts 
+   # Fixed and Fixation Rate (per gen) are also shown ('') after Burn-In period 
+ ---------------------------------------------------------------------------------
+
+    Poly Class  # Mutations    #Fixed   #Lost    #Poly   Mean#Poly  '#Fixed'  'FixRate'  'FixRate' per PopSize Generations
+    ----------  -----------    ------  -------  -------  ---------  --------  ---------  ---------------------------------
+        ALL          20646        187    20432       27        20.9      185  0.01868687    1.86869
+      NEUTRAL        20646        187    20432       27        20.9      185  0.01868687    1.86869
+
+ Mean Heterozgyosity (H), #PolySites, Wattersons's Theta, Tajima's D (n=10)
+ ----------------------------------------------------------------------------
+
+    Poly Class  Mean Obsv.H  Mean #Poly  Mean ThetaW  Tajima's D
+    ----------  -----------  ----------  -----------  ----------
+       ALL              4.23       22.1       4.27243    0.013 
+     NEUTRAL            4.23       22.1       4.27243    0.013 
+
+
+------------------------------------------------------
+** MEASUREMENTS BY FITNESS CLASS -  FOR DATA SET  1 **
+------------------------------------------------------
+
+  Fitness (F) and Heterozygosity (H) Distributions  Averaged over Measurements
+        relative fitness is a percentage of the overall population mean
+        relative heterozygosity is a percentage of the overall observed value 
+        Tajima's D values are given for each fitness class (n=10) 
+
+ Polymorphism Class :     ALL     
+ ------------ -----   -----------
+   Avg % F Rank   Avg F    % Relative F   Avg Obs H   % Relative Obs H     
+   ------------   -----     ------------   ---------   ----------------    
+        5.00     1.000000    100.0000       4.002001      94.5164     
+       15.00     1.000000    100.0000       4.233999      99.9956     
+       25.00     1.000000    100.0000       4.042000      95.4611     
+       35.00     1.000000    100.0000       4.042001      95.4611     
+       45.00     1.000000    100.0000       4.382000     103.4910     
+       55.00     1.000000    100.0000       4.314001     101.8850     
+       65.00     1.000000    100.0000       4.442000     104.9080     
+       75.00     1.000000    100.0000       4.370000     103.2076     
+       85.00     1.000000    100.0000       4.129999      97.5394     
+       95.00     1.000000    100.0000       3.413999      80.6294     
+
+
+ Polymorphism Class :   NEUTRAL   
+ ------------ -----   -----------
+   Avg % F Rank   Avg F    % Relative F   Avg Obs H   % Relative Obs H     
+   ------------   -----     ------------   ---------   ----------------    
+        5.00     1.000000    100.0000       4.002001      94.5164     
+       15.00     1.000000    100.0000       4.233999      99.9956     
+       25.00     1.000000    100.0000       4.042000      95.4611     
+       35.00     1.000000    100.0000       4.042001      95.4611     
+       45.00     1.000000    100.0000       4.382000     103.4910     
+       55.00     1.000000    100.0000       4.314001     101.8850     
+       65.00     1.000000    100.0000       4.442000     104.9080     
+       75.00     1.000000    100.0000       4.370000     103.2076     
+       85.00     1.000000    100.0000       4.129999      97.5394     
+       95.00     1.000000    100.0000       3.413999      80.6294     
+
+
+
+  - FPG  program by Jody Hey  updated and compiled June 8, 2001 
+
+
+
+*************************************************************************************
+*    PARAMETER SET NUMBER   2
+*    Parameter String: -g100 -c5 -x2 -u5 -v5 -f0.9 -h0.5  -s2 -r10 -n100 -i4 -j0.5 -oNBH -k1 -WE -Y2 -T 
+*************************************************************************************
+
+
+   Reports of Generation Number and Population Mean Fitness 
+   ----------------------------------------------------------------------------
+    100       0.95777017      200       0.93906051      300       0.97644305      400       0.96632987  
+    500       0.91612047      600       1.08317339      700       1.01908636      800       0.97309709  
+    900       0.97764623     1000       0.92664427     1100       0.94712603     1200       0.95058519  
+   1300       0.93863946     1400       0.88917631     1500       1.00734997     1600       0.90571374  
+   1700       0.93346518     1800       0.90079588     1900       1.00018919     2000       1.09844434  
+   2100       0.98688185     2200       0.95817536     2300       0.98192078     2400       1.02820516  
+   2500       0.94807035     2600       0.93466812     2700       0.98935318     2800       0.95341492  
+   2900       0.96118212     3000       0.97309840     3100       0.87905097     3200       0.90451711  
+   3300       0.97577786     3400       0.89363199     3500       0.97179598     3600       1.05298245  
+   3700       0.93901652     3800       0.93683416     3900       0.98891670     4000       1.00590777  
+   4100       1.39445662     4200       1.60025084     4300       0.94331962     4400       0.96263313  
+   4500       0.97634840     4600       0.99409109     4700       1.31040537     4800       0.95970511  
+   4900       0.98300493     5000       1.03100216     5100       0.97480547     5200       0.89681643  
+   5300       0.99926978  
+   ----------------------------------------------------------------------------
+
+   FITNESS IS EPISTATIC 
+    Epistatic Fitness model - epistatis coefficent :  2.000 
+
+ FITNESS VALUES *DO NOT* INCLUDE FIXED MUTATIONS 
+Runtime Parameters 
+------- ----------
+	popsize     :	 100  
+	polytype    :	 NBH  
+	chromesegs  :	 5   
+	chromenum   :	 2  
+	pop_u_s     :	 5.00    
+	popscoeff   :	 2.00    
+	del_prop    :	 0.90    
+	dominance   :	 0.500  
+	fit schema  :	 E
+	epistasis  :	 2.000   
+	pop_u_n     :	 5.00    
+	poprecrate  :	 10.00   
+	mrate       :	 0.000   
+	numpops     :	 1    
+	measurements:	 100  
+	bp          :	 1           
+	rand        :	 1419572676 
+	t_start     :	 400  
+	t_between   :	 50   
+	LD_analysis :	   
+
+
+-------------------------------------------
+** BASIC MEASUREMENTS  - FOR DATA SET  2 **
+-------------------------------------------
+
+	startmutavail :	          320 
+	meanmutavail  :	        243.8 
+	minmutavail   :	           24 
+
+ Total Number of Generations                  : 5350     in popsize units: 53.50   
+ Burn-In Period Ended in Generation           : 400      in popsize units: 4.00    
+ Number of Generations After Burn-In Period   : 4950     in popsize units: 49.50   
+ Overall Mean Population Fitness After Burn-In: 1.00169      
+
+ Total Mutation Counts, # Fixed and # Lost, Mean Polymorphism Counts 
+   # Fixed and Fixation Rate (per gen) are also shown ('') after Burn-In period 
+ ---------------------------------------------------------------------------------
+
+    Poly Class  # Mutations    #Fixed   #Lost    #Poly   Mean#Poly  '#Fixed'  'FixRate'  'FixRate' per PopSize Generations
+    ----------  -----------    ------  -------  -------  ---------  --------  ---------  ---------------------------------
+        ALL          53612        376    53163       73        76.2      358  0.07232323    7.23232
+    BENEFICIAL        2731        114     2610        7         6.0      111  0.02242424    2.24242
+    DELETERIOUS      24018         20    23972       26        26.4       19  0.00383838    0.38384
+      NEUTRAL        26863        242    26581       40        43.8      228  0.04606061    4.60606
+
+ Mean Heterozgyosity (H), #PolySites, Wattersons's Theta, Tajima's D (n=10)
+ ----------------------------------------------------------------------------
+
+    Poly Class  Mean Obsv.H  Mean #Poly  Mean ThetaW  Tajima's D
+    ----------  -----------  ----------  -----------  ----------
+       ALL             12.80       82.8      16.00231   -0.364 
+   BENEFICIAL           1.33        6.5       1.24967   -0.040 
+   DELETERIOUS          3.30       29.5       5.69207   -0.728 
+     NEUTRAL            8.17       46.9       9.06057   -0.201 
+
+
+------------------------------------------------------
+** MEASUREMENTS BY FITNESS CLASS -  FOR DATA SET  2 **
+------------------------------------------------------
+
+  Fitness (F) and Heterozygosity (H) Distributions  Averaged over Measurements
+        relative fitness is a percentage of the overall population mean
+        relative heterozygosity is a percentage of the overall observed value 
+        Tajima's D values are given for each fitness class (n=10) 
+
+ Polymorphism Class :     ALL     
+ ------------ -----   -----------
+   Avg % F Rank   Avg F    % Relative F   Avg Obs H   % Relative Obs H     
+   ------------   -----     ------------   ---------   ----------------    
+        5.00     1.077609    107.5788      11.905997      92.9970     
+       15.00     1.046426    104.4658      12.324000      96.2620     
+       25.00     1.029293    102.7553      12.583999      98.2929     
+       35.00     1.017469    101.5750      12.468000      97.3868     
+       45.00     1.006914    100.5212      12.437998      97.1525     
+       55.00     0.992289     99.0612      12.710001      99.2771     
+       65.00     0.979269     97.7614      12.886000     100.6518     
+       75.00     0.962096     96.0470      13.414001     104.7760     
+       85.00     0.934191     93.2612      13.640003     106.5413     
+       95.00     0.871371     86.9898      13.993998     109.3063     
+
+
+ Polymorphism Class : BENEFICIAL  
+ ------------ -----   -----------
+   Avg % F Rank   Avg F    % Relative F   Avg Obs H   % Relative Obs H     
+   ------------   -----     ------------   ---------   ----------------    
+        5.00     1.077609    107.5788       1.532000     114.7581     
+       15.00     1.046426    104.4658       1.428000     106.9678     
+       25.00     1.029293    102.7553       1.310000      98.1287     
+       35.00     1.017469    101.5750       1.232000      92.2859     
+       45.00     1.006914    100.5212       1.240000      92.8852     
+       55.00     0.992289     99.0612       1.298000      97.2298     
+       65.00     0.979269     97.7614       1.262000      94.5331     
+       75.00     0.962096     96.0470       1.344000     100.6755     
+       85.00     0.934191     93.2612       1.362000     102.0239     
+       95.00     0.871371     86.9898       1.320000      98.8777     
+
+
+ Polymorphism Class : DELETERIOUS 
+ ------------ -----   -----------
+   Avg % F Rank   Avg F    % Relative F   Avg Obs H   % Relative Obs H     
+   ------------   -----     ------------   ---------   ----------------    
+        5.00     1.077609    107.5788       2.642000      80.1310     
+       15.00     1.046426    104.4658       2.854000      86.5608     
+       25.00     1.029293    102.7553       3.110000      94.3252     
+       35.00     1.017469    101.5750       3.148001      95.4778     
+       45.00     1.006914    100.5212       3.108000      94.2646     
+       55.00     0.992289     99.0612       3.282001      99.5419     
+       65.00     0.979269     97.7614       3.418001     103.6668     
+       75.00     0.962096     96.0470       3.566000     108.1556     
+       85.00     0.934191     93.2612       3.904000     118.4070     
+       95.00     0.871371     86.9898       4.256001     129.0830     
+
+
+ Polymorphism Class :   NEUTRAL   
+ ------------ -----   -----------
+   Avg % F Rank   Avg F    % Relative F   Avg Obs H   % Relative Obs H     
+   ------------   -----     ------------   ---------   ----------------    
+        5.00     1.077609    107.5788       7.732002      94.6335     
+       15.00     1.046426    104.4658       8.041998      98.4276     
+       25.00     1.029293    102.7553       8.164001      99.9208     
+       35.00     1.017469    101.5750       8.088000      98.9907     
+       45.00     1.006914    100.5212       8.090000      99.0151     
+       55.00     0.992289     99.0612       8.130002      99.5047     
+       65.00     0.979269     97.7614       8.206001     100.4349     
+       75.00     0.962096     96.0470       8.504001     104.0822     
+       85.00     0.934191     93.2612       8.374000     102.4911     
+       95.00     0.871371     86.9898       8.418000     103.0296     
+
+-------------------------------------------------------------------------
+Pseudo Data Set - suitable for analysis by SITES Program - created by FPG from last measurement 
+# Data Set # 2  FPG input file : fpgtestdata  FPG results file : test.fpg  
+# FPG command line: -g100 -c5 -x2 -u5 -v5 -f0.9 -h0.5  -s2 -r10 -n100 -i4 -j0.5 -oNBH -k1 -WE -Y2 -T 
+# Individuals were ranked by fitness and placed in equal size bins.  
+# One sequence was drawn at random from each fitness bin 
+# 'A' for ancestral base 
+# 1 population 
+# 'G' for derived BENEFICIAL mutations
+# 'C' for derived HARMFUL mutations
+# 'T' for derived NEUTRAL mutations
+10   320 
+1   1 
+1   320
+1
+0         AAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAATAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAACAAGAAAATAAAAATAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+1         AAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAATAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAACAAGAAAATAAAAATAAGAAAAAAACAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAATAAA
+2         AAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAACAAGAAAATAAAAATAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAA
+3         AAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAACAAGAAAATAAAAATAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAA
+4         AAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAACAAATAAAAAAAAAAAAAAAAAAAAACAAAAAAATAAA
+5         AAAAAAACAAAAAAAAAAAAAAAAAAAAATAAATAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+6         AAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAATAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAACAAGAAAATAAAAATAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAATAAA
+7         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAACAAGAAAATAAAAATAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+8         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAACA
+9         AAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAATAAAATAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGATAATAAAAATAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAACA
+-------------------------------------------------------------------------
+
+
+  - FPG  program by Jody Hey  updated and compiled June 8, 2001 
+
+
+
+*************************************************************************************
+*    PARAMETER SET NUMBER   3
+*    Parameter String: -g100 -c5 -x2 -u5 -v5 -f0.9 -h0.5  -s2 -r10 -n100 -i4 -j0.5 -oNBH -k2 -M1 -WE -Y2 -T 
+*************************************************************************************
+
+
+   Reports of Generation Number and Population Mean Fitness 
+   ----------------------------------------------------------------------------
+    100       0.97309679      200       0.97116548      300       0.97169882      400       0.97941351  
+    500       0.81891054      600       0.96197516      700       0.89406526      800       0.97072470  
+    900       0.90459406     1000       1.01059580     1100       0.97155464     1200       1.02515626  
+   1300       0.90881956     1400       1.01552188     1500       1.00901425     1600       0.94492608  
+   1700       0.95118660     1800       0.95684695     1900       1.16084099     2000       1.40648556  
+   2100       0.93952835     2200       0.94792658     2300       0.97042882     2400       0.96752226  
+   2500       0.97699165     2600       0.97110456     2700       1.07723153     2800       0.96899396  
+   2900       0.90711892     3000       0.78756517     3100       0.95740199     3200       1.00577819  
+   3300       0.91253167     3400       0.93844056     3500       0.94391084     3600       0.99213105  
+   3700       0.91320556     3800       0.95744622     3900       0.98405153     4000       0.96343040  
+   4100       0.94100213     4200       0.76263964     4300       0.98688066     4400       1.03813934  
+   4500       0.98560721     4600       0.94925970     4700       0.93409723     4800       0.97296214  
+   4900       0.88150865     5000       0.96793097     5100       0.92722863     5200       0.91561300  
+   5300       1.01045752  
+   ----------------------------------------------------------------------------
+
+   FITNESS IS EPISTATIC 
+    Epistatic Fitness model - epistatis coefficent :  2.000 
+
+ FITNESS VALUES *DO NOT* INCLUDE FIXED MUTATIONS 
+Runtime Parameters 
+------- ----------
+	popsize     :	 100  
+	polytype    :	 NBH  
+	chromesegs  :	 5   
+	chromenum   :	 2  
+	pop_u_s     :	 5.00    
+	popscoeff   :	 2.00    
+	del_prop    :	 0.90    
+	dominance   :	 0.500  
+	fit schema  :	 E
+	epistasis  :	 2.000   
+	pop_u_n     :	 5.00    
+	poprecrate  :	 10.00   
+	mrate       :	 1.000   
+	numpops     :	 2    
+	measurements:	 100  
+	bp          :	 1           
+	rand        :	 1419572678 
+	t_start     :	 400  
+	t_between   :	 50   
+	LD_analysis :	   
+
+
+-------------------------------------------
+** BASIC MEASUREMENTS  - FOR DATA SET  3 **
+-------------------------------------------
+
+	startmutavail :	          320 
+	meanmutavail  :	        235.5 
+	minmutavail   :	           31 
+
+ Total Number of Generations                  : 5350     in popsize units: 53.50   
+ Burn-In Period Ended in Generation           : 400      in popsize units: 4.00    
+ Number of Generations After Burn-In Period   : 4950     in popsize units: 49.50   
+ Overall Mean Population Fitness After Burn-In: 0.97898      
+
+ Total Mutation Counts, # Fixed and # Lost, Mean Polymorphism Counts 
+   # Fixed and Fixation Rate (per gen) are also shown ('') after Burn-In period 
+ ---------------------------------------------------------------------------------
+
+    Poly Class  # Mutations    #Fixed   #Lost    #Poly   Mean#Poly  '#Fixed'  'FixRate'  'FixRate' per PopSize Generations
+    ----------  -----------    ------  -------  -------  ---------  --------  ---------  ---------------------------------
+        ALL          53206        405    52730       71        82.9      391  0.07898990    7.89899
+    BENEFICIAL        2685        106     2568       11         6.8      103  0.02080808    2.08081
+    DELETERIOUS      23713         32    23659       22        28.9       32  0.00646465    0.64646
+      NEUTRAL        26808        267    26503       38        47.2      256  0.05171717    5.17172
+
+ Mean Heterozgyosity (H), #PolySites, Wattersons's Theta, Tajima's D (n=10)
+ ----------------------------------------------------------------------------
+
+    Poly Class  Mean Obsv.H  Mean #Poly  Mean ThetaW  Tajima's D
+    ----------  -----------  ----------  -----------  ----------
+       ALL             14.41       84.9      16.39247   -0.127 
+   BENEFICIAL           1.62        7.0       1.34817    0.101 
+   DELETERIOUS          3.78       29.4       5.68628   -0.557 
+     NEUTRAL            9.01       48.5       9.35802    0.066 
+
+
+--------------------------------------------------------------------
+** MEASUREMENTS REGARDING MULTIPLE POPULATIONS -  FOR DATA SET  3 **
+--------------------------------------------------------------------
+
+
+ Mean Variance in Fitness Among Populations:     0.643323  
+               Coefficient of Variation (%):     0.331105 
+
+ Mean Variance in Heterozgyosity Among Subpopulations, by Polymorphism Class 
+ ---------------------------------------------------------------------------
+  Poly Class  Mean Variance    Coefficient of Variation (%)
+  ----------  -------------    ---------------------------- 
+       ALL              1.75642       1.0277938 
+   BENEFICIAL           0.09705       2.1897355 
+   DELETERIOUS          0.24970       1.4568251 
+     NEUTRAL            0.81182       1.1203984 
+
+ Mean # Shared and Exclusive Polymorphisms, Fixed Differences, between populations
+ -----------------------------------------------------------------------------------------------
+  Poly Class  Mean # Shared    Mean # Exclusive    Mean # Fixed 
+  ----------  -------------    ----------------    ------------  
+       ALL             34.94            49.93                1.22 
+   BENEFICIAL           4.00             2.98                0.32 
+   DELETERIOUS          9.36            20.08                0.08 
+     NEUTRAL           21.58            26.87                0.82 
+
+ Mean Heterozgyosity (H) Within and Between, Mean Fst, and Mean Nm estimates 
+ ---------------------------------------------------------------------------
+  Poly Class    H Within    H Between      Fst         Nm
+  ----------    --------    ---------   --------    ------- 
+       ALL           12.89       15.90    0.1855      1.3308 
+   BENEFICIAL         1.42        1.82    0.1866      3.7377 
+   DELETERIOUS        3.43        4.12    0.1650      1.7817 
+     NEUTRAL          8.04        9.95    0.1878      1.3194 
+
+
+------------------------------------------------------
+** MEASUREMENTS BY FITNESS CLASS -  FOR DATA SET  3 **
+------------------------------------------------------
+
+  Fitness (F) and Heterozygosity (H) Distributions  Averaged over Measurements
+        relative fitness is a percentage of the overall population mean
+        relative heterozygosity is a percentage of the overall observed value 
+        Tajima's D values are given for each fitness class (n=10) 
+
+ Polymorphism Class :     ALL     
+ ------------ -----   -----------
+   Avg % F Rank   Avg F    % Relative F   Avg Obs H   % Relative Obs H     
+   ------------   -----     ------------   ---------   ----------------    
+        5.00     1.060544    108.3311      12.011998      83.3477     
+       15.00     1.027160    104.9210      12.396000      86.0122     
+       25.00     1.012300    103.4031      12.302002      85.3600     
+       35.00     0.998972    102.0417      12.745997      88.4407     
+       45.00     0.984536    100.5671      12.848003      89.1485     
+       55.00     0.972084     99.2952      13.140001      91.1746     
+       65.00     0.955435     97.5945      13.008000      90.2587     
+       75.00     0.933964     95.4013      12.978001      90.0505     
+       85.00     0.904323     92.3735      13.312002      92.3680     
+       95.00     0.840357     85.8397      14.487999     100.5279     
+
+
+ Polymorphism Class : BENEFICIAL  
+ ------------ -----   -----------
+   Avg % F Rank   Avg F    % Relative F   Avg Obs H   % Relative Obs H     
+   ------------   -----     ------------   ---------   ----------------    
+        5.00     1.060544    108.3311       1.486000      91.5083     
+       15.00     1.027160    104.9210       1.466000      90.2767     
+       25.00     1.012300    103.4031       1.388000      85.4734     
+       35.00     0.998972    102.0417       1.397999      86.0892     
+       45.00     0.984536    100.5671       1.414000      87.0745     
+       55.00     0.972084     99.2952       1.434000      88.3061     
+       65.00     0.955435     97.5945       1.378000      84.8576     
+       75.00     0.933964     95.4013       1.324000      81.5323     
+       85.00     0.904323     92.3735       1.366000      84.1187     
+       95.00     0.840357     85.8397       1.376001      84.7345     
+
+
+ Polymorphism Class : DELETERIOUS 
+ ------------ -----   -----------
+   Avg % F Rank   Avg F    % Relative F   Avg Obs H   % Relative Obs H     
+   ------------   -----     ------------   ---------   ----------------    
+        5.00     1.060544    108.3311       2.914000      77.0891     
+       15.00     1.027160    104.9210       2.852000      75.4489     
+       25.00     1.012300    103.4031       3.103999      82.1155     
+       35.00     0.998972    102.0417       3.282000      86.8245     
+       45.00     0.984536    100.5671       3.532001      93.4382     
+       55.00     0.972084     99.2952       3.426001      90.6340     
+       65.00     0.955435     97.5945       3.464000      91.6392     
+       75.00     0.933964     95.4013       3.732000      98.7291     
+       85.00     0.904323     92.3735       3.966000     104.9195     
+       95.00     0.840357     85.8397       4.390000     116.1363     
+
+
+ Polymorphism Class :   NEUTRAL   
+ ------------ -----   -----------
+   Avg % F Rank   Avg F    % Relative F   Avg Obs H   % Relative Obs H     
+   ------------   -----     ------------   ---------   ----------------    
+        5.00     1.060544    108.3311       7.612000      84.5029     
+       15.00     1.027160    104.9210       8.077999      89.6761     
+       25.00     1.012300    103.4031       7.810001      86.7010     
+       35.00     0.998972    102.0417       8.065999      89.5429     
+       45.00     0.984536    100.5671       7.902001      87.7223     
+       55.00     0.972084     99.2952       8.280002      91.9186     
+       65.00     0.955435     97.5945       8.166002      90.6530     
+       75.00     0.933964     95.4013       7.921999      87.9443     
+       85.00     0.904323     92.3735       7.980001      88.5882     
+       95.00     0.840357     85.8397       8.721999      96.8253     
+
+-------------------------------------------------------------------------
+Pseudo Data Set - suitable for analysis by SITES Program - created by FPG from last measurement 
+# Data Set # 3  FPG input file : fpgtestdata  FPG results file : test.fpg  
+# FPG command line: -g100 -c5 -x2 -u5 -v5 -f0.9 -h0.5  -s2 -r10 -n100 -i4 -j0.5 -oNBH -k2 -M1 -WE -Y2 -T 
+# Individuals were ranked by fitness and placed in equal size bins.  
+# One sequence was drawn at random from each fitness bin 
+# 'A' for ancestral base 
+# 2  populations 
+# 'G' for derived BENEFICIAL mutations
+# 'C' for derived HARMFUL mutations
+# 'T' for derived NEUTRAL mutations
+10   320 
+1   1 
+1   320
+2
+pop1    5
+pop2    5
+0         AAAAAAGAAAAAAAAAAAAAAATAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAACAAAAAAAAAAATAAAAAAAAAAGAAAAAAAAAAAAAAAAAAATGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACTAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA
+1         AAAAAAGAATAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAGAAAAAAGAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA
+2         AAAAAAGAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAATAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAATAAAAAACAAAAAAAAAAATAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA
+3         AAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAATAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAATTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+4         AAAAAAGAATAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAGAAAAAAGAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA
+5         AAAAAAGAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAATAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAGAAAAAAAAAAAAAAAAAAATGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAATTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+6         AAAAAAGAATAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAATAATTAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA
+7         AAAAAAAAAAAAAAAAAACAACAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAATAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAATAATTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+8         AAAAAAAAAAAAAAAAAACAACAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAGAAAAAAAAAAAAAAAAAAATGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAATTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+9         AAAAAAGAAAAAAAAAAAAAAATAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAATAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAACTAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA
+-------------------------------------------------------------------------
+
+
+  - FPG  program by Jody Hey  updated and compiled June 8, 2001 
