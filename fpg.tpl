@@ -200,8 +200,8 @@
 	</div>
 	<div class="form-group">
 		<label for="j_t_between" class="control-label col-xs-6">
-			* t_between &mdash; time between measurements after burnin<br>
-			  in units of population size generations:</label>
+			t_between &mdash; time between measurements after burnin<br>
+			in units of population size generations:</label>
 		<div class="col-xs-12 col-sm-6">
 			<input type="number" class="form-control" name="j_t_between" 
                         %if defined('j_t_between'):
