@@ -31,7 +31,7 @@
 <div class="col-xs-12" style="height:5px"></div>
 
 <ul class="nav nav-pills" role="tablist">
-	<li role="presentation">
+	<li role="presentation" class="active">
 		<a href="#BASIC" aria-controls="home" role="tab" data-toggle="tab">BASIC</a>
 	</li>
 	<li role="presentation">
